@@ -1,0 +1,12 @@
+header > a img:hover {
+    cursor: zoom-in;
+}
+
+article:hover {
+    border-color: var(--turquoise-color);
+    background-color: var(--aside-color);
+}
+
+footer a:hover{
+    opacity: 0.5;
+}

@@ -1,0 +1,237 @@
+@import url("./colors.css");
+@import url("./effects.css");
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: "Raleway variable";
+    src: url("../fonts/raleway-variable.ttf");
+}
+
+@font-face {
+    font-family: "Raleway variable italic";
+    src: url("../fonts/raleway-italic-variable.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    user-select: none;
+}
+
+body {
+    background-color: var(--light-grey-color);
+    font-family: "Lato", sans-serif;
+    color: var(--font-color);
+}
+
+header, main, footer {
+    width: 1160px;
+    margin: auto;
+    background-color: var(--turquoise-color);
+}
+
+h1, h2, h3, strong {
+    font-family: "Raleway variable", sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+/****** HEADER ******/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    color: var(--white-color);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+header > a img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid var(--white-color);
+    border-radius: 50%;
+}
+
+.container-infos {
+    width: 55%;
+    padding: 0 100px;
+}
+
+strong {
+    display: block;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.infos {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.infos address, .infos > span {
+    width: 40%;
+    margin: 5px 0;
+}
+
+.infos address a, .infos > span  {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--white-color);
+    font-style: normal;
+}
+
+.infos address:nth-of-type(2) a, .infos > span{
+    justify-content: space-between;
+}
+
+.infos address img {
+    width:20px;
+    margin-right: 5px;
+}
+
+.infos address:nth-of-type(2) img, .infos span img {
+    width:20px;
+    margin-right: 0;
+}
+
+/****** MAIN ******/
+
+main {
+    display: flex;
+    background-color: var(--white-color);
+}
+
+/* ASIDE */
+
+aside {
+    width: 30%;
+    padding: 30px;
+    background-color: var(--aside-color);
+}
+
+aside section h2, main > section h2 {
+    padding: 7px 0;
+    text-align: left;
+    border-bottom: 1px solid lightgray;
+    color: var(--turquoise-color);
+}
+
+aside ul {
+    list-style-position: inside;
+    margin-top: 10px;
+}
+
+aside section:first-of-type li, aside section:nth-of-type(2) li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+aside em {
+    margin-right: 20px;
+}
+
+aside section:first-of-type ul li span {
+    color: var(--turquoise-color);
+}
+
+aside section {
+    padding: 20px 0;
+}
+
+aside section:first-of-type ul, aside section:nth-of-type(2) ul{
+    list-style-type: none;
+}
+
+aside em {
+    font-style: normal;
+    font-weight: bold;
+}
+
+aside section:nth-of-type(3) ul, aside section:last-of-type ul {
+    list-style: square;
+    list-style-position: inside;
+}
+
+aside section:nth-of-type(3) ul li::marker, aside section:last-of-type ul li::marker {
+    color: var(--turquoise-color);
+}
+
+/* SECTION DE DROITE */
+
+main > section {
+    width: 70%;
+    padding: 30px;
+}
+
+main > section section {
+    padding: 20px 0;
+}
+
+main > section p:first-of-type {
+    margin-top: 20px;
+}
+
+main > section p {
+    text-indent: 1.5rem;
+    text-justify: inter-word;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding-left: 10px;
+    border-left: 4px solid transparent;
+}
+
+main h3 {
+    flex-basis: 60%;
+    text-align: left;
+}
+
+article time {
+    color: var(--turquoise-color);
+    font-weight: bold;
+}
+
+small {
+    font-style: italic;
+}
+
+main article span, main article > time {
+    flex-basis: 40%;
+    text-align: right;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+footer section {
+    width: 10%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer section img {
+    width: 30px;
+}
