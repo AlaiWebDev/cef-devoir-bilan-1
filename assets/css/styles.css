@@ -70,40 +70,42 @@ strong {
     font-size: 2.8rem;
     margin-bottom: .6rem;
 }
-
+.infos * {
+    /* border: 1px solid red; */
+}
 .infos {
-    width: 70%;
+    width: 80%;
     margin: auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
-.infos address, .infos > span {
-    width: 40%;
-    margin: .3rem 0;
-}
-
-.infos address a, .infos > span  {
+.infos address {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.infos address a, .infos address>span {
+    display: flex;
+    justify-content: space-between;
+    width: 110px;
+    padding: 5px;
     text-decoration: none;
-    color: var(--white-color);
+    color: white;
     font-style: normal;
 }
+.infos address a>span {
+    display: inline-block;
+    width: 100%;
+}
 
-.infos address:nth-of-type(2) a, .infos > span{
-    justify-content: space-between;
+.infos address a:nth-of-type(2)>span {
+    text-align: right;
 }
 
 .infos address img {
     width: 1.25rem;
     margin-right: .3rem;
-}
-
-.infos address:nth-of-type(2) img, .infos span img {
-    width: 1.25rem;
-    margin-right: 0;
 }
 
 /****** MAIN ******/
