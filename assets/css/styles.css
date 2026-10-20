@@ -26,7 +26,7 @@ body {
     color: var(--font-color);
 }
 
-header, main, footer {
+#container {
     width: 1160px;
     margin: auto;
     background-color: var(--turquoise-color);
@@ -60,7 +60,7 @@ header > a img {
     border-radius: 50%;
 }
 
-.container-infos {
+header>div {
     width: 55%;
     padding: 0 6.2rem;
 }
@@ -70,42 +70,57 @@ strong {
     font-size: 2.8rem;
     margin-bottom: .6rem;
 }
-.infos * {
-    /* border: 1px solid red; */
-}
-.infos {
+
+header>div div {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px 30px;
     width: 80%;
     margin: auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
 }
-.infos address {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+
+header>div div address {
+    /* Le conteneur address couvre toute la grille */
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    /* Ses enfants utilisent les mêmes colonnes et lignes */
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
 }
-.infos address a, .infos address>span {
+
+header>div div address a {
     display: flex;
-    justify-content: space-between;
-    width: 110px;
     padding: 5px;
     text-decoration: none;
     color: white;
     font-style: normal;
 }
-.infos address a>span {
-    display: inline-block;
-    width: 100%;
-}
 
-.infos address a:nth-of-type(2)>span {
+header>div div address a:nth-of-type(2)>span {
     text-align: right;
 }
 
-.infos address img {
+header>div div address img {
     width: 1.25rem;
     margin-right: .3rem;
+}
+
+header>div div>span {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 5px;
+    padding-left: 7px;
+}
+
+header>div div>span img{
+    width: 1rem;
+    vertical-align: bottom;
+}
+
+header>div div>span span {
+    padding-left: 7px;
 }
 
 /****** MAIN ******/
